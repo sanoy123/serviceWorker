@@ -27,7 +27,7 @@ function getStories(){
 
             <img src="`+stories.articles[i].urlToImage+`" class="img-responsive">
            <h3><a href="`+stories.articles[i].url+`" target="_blank">` + stories.articles[i].title + `</a></h3>
-           <span class="label label-primary">`+new Date(stories.articles[i].publishedAt).toISOString()+`</span>
+           <span class="label label-primary">`+new Date(stories.articles[i].publishedAt).toLocaleDateString('en-US')+`</span>
             <p>`+stories.articles[i].description+`</p>
 
         </div>`;
