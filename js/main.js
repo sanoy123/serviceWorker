@@ -17,6 +17,7 @@ function getStories(){
   xhttp.onreadystatechange= function(){
     if(xhttp.readyState ==4 && xhttp.status ==200){
       var stories = JSON.parse(xhttp.responseText);
+      console.log(stories);
       document.getElementById('stories').innerHTML =
       `<div class="panel panel-default">
         <div class="panel-heading">
