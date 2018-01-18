@@ -22,13 +22,13 @@ function getStories(){
       document.getElementById('stories').innerHTML =
       `<div class="panel panel-default">
         <div class="panel-heading">
-         <h3 class="panel-title">` + stories.articles.title + `</h3>
+         <h3 class="panel-title">` + stories.articles[0].title + `</h3>
         </div>
         <div class="panel-body">
           <div class="col-md-3">
-            <img src="`+stories.articles.urlToImage+`">
+            <img src="`+stories.articles[0].urlToImage+`">
           </div>
-          <div class="col-md-9">`+stories.articles.description+`</div>
+          <div class="col-md-9">`+stories.articles[0].description+`</div>
         </div>
       </div>`;
     }
