@@ -30,6 +30,10 @@ function getStories(){
             <p>`+stories.articles[i].description+`</p>
 
         </div>`;
+
+        if(((i+1)%3) == 0){
+          storyList+=`<div class="clearfix"></div>`;
+        }
       }
 
       document.getElementById('stories').innerHTML = storyList;
