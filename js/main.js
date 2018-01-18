@@ -1,5 +1,18 @@
-function getStories(e){
-  e.preventDefault();
+if ('serviceWorker' in navigator) {
+
+  navigator.serviceWorker
+    .register('./sw.js', { scope: './' })
+    .then(function(registration) {
+      console.log("Service Worker Registered");
+    })
+    .catch(function(err) {
+      console.log("Service Worker Failed to Register", err);
+    })
+
+}
+
+function getStories(){
+
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange= function(){
     if(xhttp.readyState ==4 && xhttp.status ==200){
