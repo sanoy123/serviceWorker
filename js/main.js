@@ -1,3 +1,4 @@
+/*
 if ('serviceWorker' in navigator) {
 
   navigator.serviceWorker
@@ -10,6 +11,7 @@ if ('serviceWorker' in navigator) {
     })
 
 }
+*/
 
 
 function getStories(){
