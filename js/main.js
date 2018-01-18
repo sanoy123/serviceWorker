@@ -18,19 +18,24 @@ function getStories(){
   xhttp.onreadystatechange= function(){
     if(xhttp.readyState ==4 && xhttp.status ==200){
       var stories = JSON.parse(xhttp.responseText);
-
-      document.getElementById('stories').innerHTML =
-      `<div class="panel panel-default">
-        <div class="panel-heading">
-         <h3 class="panel-title">` + stories.articles[0].title + `</h3>
-        </div>
-        <div class="panel-body">
-          <div class="col-md-3">
-            <img src="`+stories.articles[0].urlToImage+`">
+      var storyList='';
+      for(var i=0; i<stories.length; i++){
+        storyList += `<div class="col-md-3">
+          <div class="panel-heading">
+          <div class="row">
+            <img src="`+stories.articles[i].urlToImage+`">
           </div>
-          <div class="col-md-9">`+stories.articles[0].description+`</div>
-        </div>
-      </div>`;
+          <div class="row">
+           <h3 class="panel-title">` + stories.articles[i].title + `</h3>
+          </div>
+          <div class="row">
+            <p>`+stories.articles[i].description+`</p>
+          </div>
+        </div>`;
+      }
+
+      document.getElementById('stories').innerHTML = storyList;
+
     }
   }
   xhttp.open('GET', 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=af00c7eef7c74c9c9300434acb5e9159', true);
