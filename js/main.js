@@ -20,6 +20,7 @@ function getStories(){
   xhttp.onreadystatechange= function(){
     if(xhttp.readyState ==4 && xhttp.status ==200){
       var stories = JSON.parse(xhttp.responseText);
+      console.log(stories);
       var storyList='';
       for(var i=0; i<stories.length; i++){
         storyList += `<div class="col-md-3">
