@@ -24,12 +24,11 @@ function getStories(){
       var storyList='';
       for(var i=0; i<3; i++){
         storyList += `<div class="col-md-3">
-          <div>
-          <div class="row">
+              
             <img src="`+stories.articles[i].urlToImage+`" class="img-responsive">
            <h3>` + stories.articles[i].title + `</h3>
             <p>`+stories.articles[i].description+`</p>
-          </div>
+
         </div>`;
       }
 
