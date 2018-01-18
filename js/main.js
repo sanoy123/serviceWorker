@@ -22,9 +22,9 @@ function getStories(){
       var stories = JSON.parse(xhttp.responseText);
       console.log(stories.articles.length);
       var storyList='';
-      for(var i=0; i<3; i++){
-        storyList += `<div class="col-md-3">
-              
+      for(var i=0; i<stories.articles.length; i++){
+        storyList += `<div class="col-md-4">
+
             <img src="`+stories.articles[i].urlToImage+`" class="img-responsive">
            <h3>` + stories.articles[i].title + `</h3>
             <p>`+stories.articles[i].description+`</p>
