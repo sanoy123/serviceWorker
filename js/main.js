@@ -22,7 +22,7 @@ function getStories(){
       var stories = JSON.parse(xhttp.responseText);
       console.log(stories);
       var storyList='';
-      for(var i=0; i<stories.length; i++){
+      for(var i=0; i<stories.articles.length; i++){
         storyList += `<div class="col-md-3">
           <div class="panel-heading">
           <div class="row">
