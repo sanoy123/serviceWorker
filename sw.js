@@ -1,9 +1,9 @@
 var cacheName = 'v00';
 var cacheFiles = [
   '/',
-  'index.html',
-  'js/main.js',
-  'css/bootstrap.min.css'
+  '/index.html',
+  '/js/main.js',
+  '/css/bootstrap.min.css'
   ];
 
 
